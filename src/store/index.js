@@ -15,8 +15,8 @@ const store = new Vuex.Store({
   },
 
   mutations:{
-    addTodo(state, item){
-      state.todos.push(item);
+    addTodo(state, todo){
+      state.todos.push(todo);
     },
 
     delTodo(state, index){
@@ -25,9 +25,9 @@ const store = new Vuex.Store({
   },
 
   actions:{
-    addTodo(context, item){
-      if(item.value != ""){
-        context.commit("addTodo", item);
+    addTodo(context, todo){
+      if(todo.value != ""){
+        context.commit("addTodo", todo);
       }
     },
 

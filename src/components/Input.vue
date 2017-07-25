@@ -15,13 +15,13 @@
     },
     methods:{
       addTodo(){
-        let item = {
+        let todo = {
           value:this.value,
           id:++this.id
         };
 
         this.value = "";
-        this.$store.dispatch("addTodo", item);
+        this.$store.dispatch("addTodo", todo);
       }
     }
   }
